@@ -11,13 +11,13 @@ if(isset($_POST['update']))
 {
 $did=intval($_GET['deptid']);    
 $deptname=$_POST['departmentname'];
-$deptshortname=$_POST['departmentshortname'];
+$deptmanager=$_POST['departmentmanager'];
 $deptcode=$_POST['deptcode'];   
-$sql="update tbldepartments set DepartmentName=:deptname,DepartmentCode=:deptcode,DepartmentShortName=:deptshortname where id=:did";
+$sql="update tbldepartments set DepartmentName=:deptname,DepartmentCode=:deptcode,DepartmentManager=:deptmanager where id=:did";
 $query = $dbh->prepare($sql);
 $query->bindParam(':deptname',$deptname,PDO::PARAM_STR);
 $query->bindParam(':deptcode',$deptcode,PDO::PARAM_STR);
-$query->bindParam(':deptshortname',$deptshortname,PDO::PARAM_STR);
+$query->bindParam(':deptmanager',$deptmanager,PDO::PARAM_STR);
 $query->bindParam(':did',$did,PDO::PARAM_STR);
 $query->execute();
 $msg="Department updated Successfully";
@@ -108,8 +108,8 @@ foreach($results as $result)
 
 
           <div class="input-field col s12">
-<input id="departmentshortname" type="text"  class="validate" autocomplete="off" value="<?php echo htmlentities($result->DepartmentManager);?>" name="departmentshortname"  required>
-                                                <label for="deptshortname">Department Manager</label>
+<input id="departmentshortname" type="text"  class="validate" autocomplete="off" value="<?php echo htmlentities($result->DepartmentManager);?>" name="departmentmanager"  required>
+                                                <label for="deptmanager">Department Manager</label>
                                             </div>
   
 

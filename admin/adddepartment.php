@@ -10,13 +10,13 @@ else{
     if(isset($_POST['add']))
     {
         $deptname=$_POST['departmentname'];
-        $deptshortname=$_POST['departmentshortname'];
+        $deptmanager=$_POST['departmentmanager'];
         $deptcode=$_POST['deptcode'];   
-        $sql="INSERT INTO tbldepartments(DepartmentName,DepartmentCode,DepartmentShortName) VALUES(:deptname,:deptcode,:deptshortname)";
+        $sql="INSERT INTO tbldepartments(DepartmentName,DepartmentCode,DepartmentManager) VALUES(:deptname,:deptcode,:deptmanager)";
         $query = $dbh->prepare($sql);
         $query->bindParam(':deptname',$deptname,PDO::PARAM_STR);
         $query->bindParam(':deptcode',$deptcode,PDO::PARAM_STR);
-        $query->bindParam(':deptshortname',$deptshortname,PDO::PARAM_STR);
+        $query->bindParam(':deptmanager',$deptmanager,PDO::PARAM_STR);
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
         if($lastInsertId)
