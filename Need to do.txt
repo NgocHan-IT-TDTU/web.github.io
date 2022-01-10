@@ -1,0 +1,30 @@
+﻿đặt tên database: elms ( sau này đổi xong đổi lại)
+tài khoản admin:
+	admin
+	12345
+tài khoản nhân viên: ( lấy email của bất kì nhân viên nào, mật khẩu: 12345)
+	quangkhai@gmail.com
+	12345
+
+
+
+
+chưa có:
+	Phần task ( phần trọng tâm) chưa có.
+	Nếu không thực hiện đổi mật khẩu trong lần đăng nhập
+đầu tiên thì nhân viên sẽ không truy cập được bất kỳ chức năng nào khác ngoài việc đăng xuất.
+	Từ sau khi mật khẩu được reset về mặc định thì nhân viên lại
+tiếp tục bị yêu cầu đổi mật khẩu trong lần đầu tiên đăng nhập trước khi có thể truy cập vào các dịch vụ khác.
+	Sau khi đăng nhập vào hệ thống thì người dùng chỉ nhìn thấy được các chức năng trong phạm vi quyền hạn của mình. Nếu người
+dùng cố tình gõ địa chỉ url để truy cập vào chức năng không dành cho mình thì cũng không thể truy cập được.( cái này hình như bữa t thêm rồi, mà ko biết chạy ổn ko
+	Chưa có điều kiện không được chọn 1 người làm 2 chức trưởng phòng.
+	Giám đốc không thể làm trưởng phòng
+	Nếu một nhân viên được chọn hoặc bị tước bỏ chức vụ trưởng phòng thì trong trang thông tin chi tiết của người đó sẽ
+hiển thị (hoặc mất đi) chức vụ trưởng phòng tương ứng.
+	Nhân viên chưa có avatar ( đã có thể thay đổi mật khẩu)
+
+file : employee-detail ( vẫn chưa hiện bảng detail được)
+
+chưa chuyển class, id có css sang style.css: employee-detail,leave-detail, editdepartment,managedepartments,
+
+
